@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.png
 heroText: OsmiCSX
-tagline: Tailwind CSS on React Native
+tagline: An utility style framework for React Native
 actionText: Get Started →
 actionLink: /page/get-started
 features:

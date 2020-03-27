@@ -5,7 +5,7 @@ const plugins = require('./config/plugins')
 
 module.exports = {
   title: 'OsmiCSX',
-  description: "Tailwind CSS on React Native",
+  description: "An utility style framework for React Native",
   head: headers,
   themeConfig: {
     domain: process.env.CFG_DOMAIN,
