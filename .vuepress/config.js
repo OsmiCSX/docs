@@ -7,6 +7,7 @@ module.exports = {
   title: 'OsmiCSX',
   description: "An utility style framework for React Native",
   head: headers,
+  base: '/docs/',
   themeConfig: {
     domain: process.env.CFG_DOMAIN,
     displayAllHeaders: true,
@@ -23,10 +24,7 @@ module.exports = {
     editLinks: true,
     editLinkText: 'Help us improve this page!',
     smoothScroll: false,
-    lastUpdated: 'Last Updated',
-    feed: {
-      canonical_base: process.env.CFG_DOMAIN
-    }
+    lastUpdated: 'Last Updated'
   },
   extendMarkdown: md => {
     // use more markdown-it plugins!
