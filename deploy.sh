@@ -6,6 +6,9 @@ set -e
 # build
 yarn build
 
+# add commit
+git add dist
+
 echo "Commit message for gh-pages commit?"
 read pagecommit
 
