@@ -3,7 +3,7 @@
 # abort on errors
 set -e
 
-# build
+# build npm
 npm run build
 
 # add commit
