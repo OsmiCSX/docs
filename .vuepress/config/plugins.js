@@ -7,6 +7,12 @@ const plugins = [
     'vuepress-plugin-medium-zoom', {
       selector: '.content__default img:not(.no-zoom)'
     }
+  ],
+  [
+    '@vuepress/google-analytics',
+      {
+        'ga': 'UA-79152971-2'
+      }
   ]
 ]
 
