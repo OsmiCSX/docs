@@ -18,7 +18,18 @@ module.exports = {
     ],
     sidebar: [
       '/',
+      '/page/introduction',
       '/page/get-started',
+      '/page/release-notes',
+      '/page/core',
+      '/page/layout',
+      '/page/flexbox',
+      '/page/spacing',
+      '/page/typography',
+      '/page/background',
+      '/page/borders',
+      '/page/effects',
+      '/page/transforms'
     ],
     repo: process.env.CFG_REPO,
     editLinks: true,
