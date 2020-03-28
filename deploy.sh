@@ -4,7 +4,7 @@
 set -e
 
 # build
-yarn build
+npm run build
 
 # add commit
 git add dist
