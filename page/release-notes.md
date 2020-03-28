@@ -1,7 +1,7 @@
 # Release Notes
 What's new in the latest version of OsmiCSX
 
-## OsmiCSX v0.1.4
+## OsmiCSX v0.2.0
 Current stable version of OsmiCSX with useful features~!
 - Fix minor bugs
 - Refactor `flexDirection` namespace
