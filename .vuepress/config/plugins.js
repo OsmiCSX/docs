@@ -10,4 +10,10 @@ const plugins = [
   ]
 ]
 
+if (process.env.NODE_ENV === "production") {
+  plugins.push([ 'sitemap', {
+    hostname: 'https://osmicsx.github.io'
+  }])
+}
+
 module.exports = plugins
