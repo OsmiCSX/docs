@@ -36,7 +36,12 @@ module.exports = {
     editLinks: true,
     editLinkText: 'Help us improve this page!',
     smoothScroll: false,
-    lastUpdated: 'Last Updated'
+    lastUpdated: 'Last Updated',
+    algolia: {
+      appId: 'FPCS8RXJD3',
+      apiKey: '3fadf181c86158520bc0be2b37b1533a',
+      indexName: 'prod_OSMICSX'
+    }
   },
   extendMarkdown: md => {
     // use more markdown-it plugins!
