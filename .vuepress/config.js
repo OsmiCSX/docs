@@ -9,7 +9,7 @@ module.exports = {
   head: headers,
   base: '/docs/',
   themeConfig: {
-    logo: '/logo.png',
+    logo: '/logo-small.png',
     domain: process.env.CFG_DOMAIN,
     displayAllHeaders: true,
     nav: [{
