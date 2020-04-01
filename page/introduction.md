@@ -46,43 +46,38 @@ While you can do a lot with just utility classes, as a project grows it can be u
 
 OsmiCSX provides tools for extracting component classes from repeated utility patterns, making it easy to update multiple instances of a component from one place:
 ```jsx harmony
-import { StyleSheet } from 'react-native'
-import { apply } from 'osmicsx'
+import { connect } from '../lib/OsmiConfig' // your osmi config path
 
-export default StyleSheet.create({
-  container: apply([
-    "flex",
-    "bg-gray-600",
-    "items-center",
-    "justify-center"
-  ]),
-  title: apply([
+export default connect({
+  container: [
+    "bg-blue-500",
+    "p-2",
+    "pl-5",
+    "pr-5",
+    "rounded"
+  ],
+  text: [
     "text-white",
-    "text-center",
-    "text-2xl"
-  ])
+    "text-base",
+    "font-bold",
+    "text-center"
+  ]
 })
 ```
 
 ## Customizable
-we really know that everyone has their own style, so we support for custom style in **_apply()_**.
+we really know that everyone has their own style, so we've been added new feaature `OsmiProvider` to realize it. Please look at OsmiProvider for more detail.
 
 ```jsx harmony
-import { StyleSheet } from 'react-native'
-import { apply } from 'osmicsx'
+import customTheme from '../assets/custom-theme'
+import { OsmiProvider } from 'osmicsx'
 
-export default StyleSheet.create({
-  container: apply([
-    "flex",
-    "bg-gray-600",
-    "items-center",
-    "justify-center"
-  ]),
-  title: apply([
-    "text-white",
-    "text-center",
-    "text-2xl",
-    { fontFamily: "Roboto" } // Custom your style
-  ])
-})
+const provider = new OsmiProvider(customTheme);
+
+const { apply, connect } = provider;
+
+export {
+  apply,
+  connect
+}
 ```

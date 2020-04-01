@@ -2,6 +2,8 @@
 title: Core Concept
 lang: id-ID
 ---
+`default import method is deprecated and will be removed in the next OsmiCSX update. Please use OsmiProvider instead`
+
 ## Single Style
 Give a single style directly to the element by using default styles from `osmicsx`.
 ```jsx harmony
@@ -88,26 +90,4 @@ const App = props => {
     </View>
   )
 } 
-```
-
-## Custom Font Family
-We currently still not support any custom style file, so to solve that problem we provie helper method **`family()`** to custom font family text. But before cutomize the font family, you must link the font asset into your project first.
-```jsx harmony
-import { StyleSheet } from 'react-native'
-import { apply } from 'osmicsx'
-
-export default StyleSheet.create({
-  container: apply([
-    "flex",
-    "bg-gray-600",
-    "items-center",
-    "justify-center"
-  ]),
-  title: apply([
-    "text-white",
-    "text-center",
-    "text-2xl",
-    family("Roboto-Medium") // Font Family Name
-  ])
-})
 ```

@@ -19,17 +19,17 @@ yarn add osmicsx
 ```jsx harmony
 import React from 'react'
 import { View, Text } from 'react-native'
-import styles from 'osmicsx'
+import { apply } from 'osmicsx'
 
 const App = props => {
   return (
-    <View style={styles([
+    <View style={apply([
       "flex", 
       "bg-gray-800", 
       "items-center", 
       "justify-center"
     ])}>
-      <Text style={styles([
+      <Text style={apply([
         "text-white", 
         "text-xl", 
         "text-center"])}>Hello World!</Text>

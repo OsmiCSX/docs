@@ -23,6 +23,7 @@ module.exports = {
       '/page/get-started',
       '/page/release-notes',
       '/page/core',
+      '/page/osmi-provider',
       '/page/layout',
       '/page/flexbox',
       '/page/spacing',
