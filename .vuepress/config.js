@@ -15,6 +15,10 @@ module.exports = {
     nav: [{
         text: 'Home',
         link: '/'
+      },
+      {
+        text: 'GitHub',
+        link: 'https://github.com/OsmiCSX/osmicsx'
       }
     ],
     sidebar: [
