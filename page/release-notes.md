@@ -1,6 +1,10 @@
 # Release Notes
 What's new in the latest version of OsmiCSX?
 
+## OsmiCSX v0.3.3
+### Fix minor bugs Border Width
+### Add colors to provider
+
 ## OsmiCSX v0.3.2
 Current stable version of OsmiCSX with useful features~!
 ### Add new `OsmiProvider`
@@ -22,11 +26,3 @@ In this release, we've been added OsmiProvider which will replace several method
 - Refactor `flexDirection` namespace
 - Add more border style
 - Update official documentation
-
-
-## OsmiCSX v0.1.3
-- Fix text alignment bug
-- Update custom method
-- Add new helper method
-
-For the full list of changes, [check out the complete release notes on GitHub](https://github.com/OsmiCSX/osmicsx/releases/tag/0.1.3).
