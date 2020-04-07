@@ -12,6 +12,25 @@ export default ({
     if (siteData.themeConfig.versions.all.includes(version)) {
       siteData.themeConfig.versions.selected = version
       
+      let customStyle = document.getElementById('custom-style')
+
+      if (customStyle) {
+        if (customStyle.classList.contains(version)) {
+          return;
+        } else {
+          customStyle.remove()
+        }
+      }
+
+      let versionText = (version === "master") ? "Latest" : `v${version}`
+      let node = document.createElement("style")
+      let textnode = document.createTextNode(`span.site-name:after{content:'${versionText}';font-size: 14px;vertical-align: top;color: #f9be1a;margin-left: 16px;}`); 
+
+      node.appendChild(textnode)
+      node.id = 'custom-style'
+      node.classList.add('v-' + version)
+
+      document.getElementsByTagName('head')[0].appendChild(node)
     }
   })
 }
