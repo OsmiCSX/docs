@@ -25,8 +25,6 @@ module.exports = {
       all: versioning.versions.all
     },
     repo: process.env.CFG_REPO,
-    editLinks: true,
-    editLinkText: 'Help us improve this page!',
     smoothScroll: false,
     lastUpdated: 'Last Updated',
     algolia: {
