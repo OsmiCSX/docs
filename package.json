@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vuepress dev",
     "build": "vuepress build -d dist",
-    "run": "live-server --port=8089 dist"
+    "serve": "live-server --port 8089 --mount=/docs:./dist"
   },
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "^1.4.0",
