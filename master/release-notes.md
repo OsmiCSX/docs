@@ -41,3 +41,9 @@ We're more simplify the styling concept, for the templating style by removing th
 
 ### `deprecated` some Method
 In this release, we've been added OsmiProvider which will replace several method like the default method and family method.
+
+## OsmiCSX v0.2.0
+- Fix minor bugs
+- Refactor `flexDirection` namespace
+- Add more border style
+- Update official documentation
