@@ -11,5 +11,6 @@ module.exports = [
   'background',
   'borders',
   'effects',
-  'transforms'
+  'transforms',
+  'examples'
 ]

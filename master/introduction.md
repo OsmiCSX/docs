@@ -16,7 +16,7 @@ Instead of opinionated predesigned components, OsmiCSX provides low-level utilit
 ```jsx harmony
 import React, { Component } from 'react'
 import { StatusBar, View, Text } from 'react-native'
-import styles from 'osmicsx'
+import { apply } from 'osmicsx'
 
 export default class App extends Component {
   constructor(props) {
@@ -25,16 +25,16 @@ export default class App extends Component {
 
   render(){
     return (
-      <View style={styles([
+      <View style={apply(
         "flex",
         "items-center", 
         "justify-center"
-      ])}>
-        <Text style={styles([
+      )}>
+        <Text style={apply(
           "text-white",
           "text-center",
           "text-2xl"
-        ])}>Hello World!</Text>
+        )}>Hello World!</Text>
       </View>
     )
   }

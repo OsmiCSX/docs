@@ -13,17 +13,17 @@ import { StyleSheet } from 'react-native'
 import { apply } from 'osmicsx'
 
 export default StyleSheet.create({
-  container: apply([
+  container: apply(
     "flex",
     "bg-gray-500",
     "items-center",
     "justify-center"
-  ]),
-  title: apply([
+  ),
+  title: apply(
     "text-white",
     "text-2xl",
     "text-center"
-  ])
+  )
 })
 ```
 
@@ -70,29 +70,7 @@ export {
 }
 ```
 
-## Usage
-After the config complete, now you can import from your config file.
-```jsx harmony
-import { connect } from '../lib/OsmiConfig' // your osmi config path
-
-export default connect({
-  container: [
-    "bg-blue-500",
-    "p-2",
-    "pl-5",
-    "pr-5",
-    "rounded"
-  ],
-  text: [
-    "text-white",
-    "text-base",
-    "font-bold",
-    "text-center"
-  ]
-})
-```
-
-## connect()
+## connect() Method
 `connect()` is new method helper in the OsmiProvider, it will provide a convert algorithm to convert an array to be `StyleSheet` react native object. Use this method in templating style
 ```jsx harmony
 import { connect } from '../lib/OsmiConfig' // your osmi config path
@@ -114,7 +92,7 @@ export default connect({
 })
 ```
 
-## apply()
+## apply() Method
 We're moving `apply()` method to OsmiProvider too. So you can apply your custom namespace style
 ```jsx harmony
 import { StyleSheet } from 'react-native'
