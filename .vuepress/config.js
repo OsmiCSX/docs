@@ -1,5 +1,6 @@
 const dotenv = require('dotenv').config()
 
+const versioning = require('./config/versioning')
 const headers = require('./config/head')
 const plugins = require('./config/plugins')
 
@@ -13,33 +14,17 @@ module.exports = {
     domain: process.env.CFG_DOMAIN,
     displayAllHeaders: true,
     nav: [{
-        text: 'Home',
-        link: '/'
-      },
-      {
-        text: 'GitHub',
-        link: 'https://github.com/OsmiCSX/osmicsx'
+        text: 'Version',
+        items: versioning.linksFor('get-started.md')
       }
     ],
-    sidebar: [
-      '/',
-      '/page/introduction',
-      '/page/get-started',
-      '/page/release-notes',
-      '/page/core',
-      '/page/osmi-provider',
-      '/page/layout',
-      '/page/flexbox',
-      '/page/spacing',
-      '/page/typography',
-      '/page/background',
-      '/page/borders',
-      '/page/effects',
-      '/page/transforms'
-    ],
+    sidebar: versioning.sidebars,
+    versions: {
+      latest: versioning.versions.latest,
+      selected: versioning.versions.latest,
+      all: versioning.versions.all
+    },
     repo: process.env.CFG_REPO,
-    editLinks: true,
-    editLinkText: 'Help us improve this page!',
     smoothScroll: false,
     lastUpdated: 'Last Updated',
     algolia: {
