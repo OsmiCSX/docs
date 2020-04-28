@@ -8,14 +8,14 @@ Utilities for scaling elements with transform. We provide 2 helper method to sca
 ```jsx harmony
 import { scaleWidth } from 'osmicsx'
 
-scaleWidth(100)
+scaleWidth('100%')
 ```
 
 ### scaleHeight
 ```jsx harmony
 import { scaleHeight } from 'osmicsx'
 
-scaleHeight(100)
+scaleHeight('100%')
 ```
 
 ## Rotate

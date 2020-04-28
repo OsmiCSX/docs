@@ -25,16 +25,8 @@ export default class App extends Component {
 
   render(){
     return (
-      <View style={apply(
-        "flex",
-        "items-center", 
-        "justify-center"
-      )}>
-        <Text style={apply(
-          "text-white",
-          "text-center",
-          "text-2xl"
-        )}>Hello World!</Text>
+      <View style={apply("flex items-center justify-center")}>
+        <Text style={apply("text-white text-center text-2xl")}>Hello World!</Text>
       </View>
     )
   }
@@ -49,19 +41,8 @@ OsmiCSX provides tools for extracting component classes from repeated utility pa
 import { connect } from '../lib/OsmiConfig' // your osmi config path
 
 export default connect({
-  container: [
-    "bg-blue-500",
-    "p-2",
-    "pl-5",
-    "pr-5",
-    "rounded"
-  ],
-  text: [
-    "text-white",
-    "text-base",
-    "font-bold",
-    "text-center"
-  ]
+  container: "bg-blue-500 p-2 pl-5 pr-5 rounded",
+  text: "text-white text-base font-bold text-center"
 })
 ```
 

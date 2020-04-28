@@ -1,9 +1,62 @@
 # Release Notes
 What's new in the latest version of OsmiCSX?
 
-## OsmiCSX v0.4.0
-Current stable version of OsmiCSX with useful features~!
+## OsmiCSX v0.5.0
+### Update algorithm for apply() method
+Previously, **`apply()`** method need to use multiple params. Now, we gonna migrate to _space separator_ instead of array params.
 
+**before**
+```jsx harmony
+apply("flex", "items-center", "justify-center")
+```
+**after**
+```jsx harmony
+apply("flex items-center justify-center")
+```
+
+### Update connect() method algorithm
+**`connect()`** algorithm also have an update. We also want to use _space separator_ on **`connect()`** method. We think that it will easier and more simple.
+
+**before**
+```jsx harmony
+export default connect({
+    container: [
+        "flex",
+        "items-center",
+        "justify-center",
+    ],
+    title: [
+        "text-lg",
+        "text-center",
+        "text-black",
+        "font-bold"
+    ]
+})
+```
+**after**
+```jsx harmony
+export default connect({
+    container: "flex items-center justify-center",
+    title: "text-lg text-center text-black font-bold"
+})
+```
+
+### Colors support in apply() method
+Adding support to call any colors with **`apply()`** method. So, you don't need to use any colors extractor again
+
+**before**
+```jsx harmony
+colors["red-500"]
+```
+**after**
+```jsx harmony
+apply("red-500")
+```
+
+### Update scaling method & responsive text
+We receive that community want's something like automatically resize the text scale depends on the device resolution. So we take a look on `react-native-responsive-screen` dependency and implement it on OsmiCSX. It also effects to the previous `scale` method.
+
+## OsmiCSX v0.4.0
 ### Remove `family()` helper method
 **_`family()`_** helper method has been deprecated in this version. Please set up your custom font family on **`OsmiProvider`**
 

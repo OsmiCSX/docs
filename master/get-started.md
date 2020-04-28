@@ -23,16 +23,8 @@ import { apply } from 'osmicsx'
 
 const App = props => {
   return (
-    <View style={apply(
-      "flex", 
-      "bg-gray-800", 
-      "items-center", 
-      "justify-center"
-    )}>
-      <Text style={apply(
-        "text-white", 
-        "text-xl", 
-        "text-center")}>Hello World!</Text>
+    <View style={apply("flex bg-gray-800 items-center justify-center")}>
+      <Text style={apply("text-white text-xl text-center")}>Hello World!</Text>
     </View>
   )
 } 
