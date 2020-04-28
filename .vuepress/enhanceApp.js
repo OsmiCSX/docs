@@ -11,7 +11,7 @@ export default ({
 
     if (siteData.themeConfig.versions.all.includes(version)) {
       siteData.themeConfig.versions.selected = version
-      
+
       if (typeof document !== "undefined") {
         let customStyle = document.getElementById('custom-style')
 
@@ -23,9 +23,9 @@ export default ({
           }
         }
 
-        let versionText = (version === "master") ? "Latest" : `v${version}`
+        let versionText = (version === "0.5") ? "Latest" : `v${version}`
         let node = document.createElement("style")
-        let textnode = document.createTextNode(`span.site-name:after{content:'${versionText}';font-size:14px;vertical-align:top;border-bottom:2px solid #ececec;padding-bottom:4px;;margin-left:16px;}`); 
+        let textnode = document.createTextNode(`span.site-name:after{content:'${versionText}';font-size:14px;vertical-align:top;border-bottom:2px solid #ececec;padding-bottom:4px;;margin-left:16px;}`);
 
         node.appendChild(textnode)
         node.id = 'custom-style'

@@ -23,5 +23,5 @@ echo "Commit message for master commit?"
 read mastercommit
 git commit -m "update: $mastercommit"
 
-# push master 
+# push 0.5
 git push origin master

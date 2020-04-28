@@ -1,4 +1,4 @@
- 
+
 // This file does not work with hot reloading
 // Restart the dev server to apply changes
 
@@ -33,7 +33,7 @@ module.exports = {
     let links = []
 
     versions.forEach(version => {
-      let upperCaseText = (version === "master") ? "Master" : version 
+      let upperCaseText = (version === "master") ? "Master" : version
       let item = { text: upperCaseText, link: `/${version}/${url}` }
       links.push(item)
     })
@@ -60,14 +60,14 @@ module.exports = {
     this.info(`Generating new version into 'docs/${version}' ...`)
 
     try {
-      fse.copySync(`${path}/master`, `${path}/${version}`)
+      fse.copySync(`${path}/0.5`, `${path}/${version}`)
 
-      // remove 'master' from the top of list
+      // remove '0.5' from the top of list
       versions.shift()
       // add new generated version on top of list
       versions.unshift(version)
-      // add 'master' again on top of list
-      versions.unshift('master')
+      // add '0.5' again on top of list
+      versions.unshift('0.5')
 
       // write to versions.json
 
