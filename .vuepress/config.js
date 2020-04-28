@@ -24,7 +24,7 @@ module.exports = {
       selected: versioning.versions.latest,
       all: versioning.versions.all
     },
-    repo: process.env.CFG_REPO,
+    repo: 'OsmiCSX/osmicsx',
     smoothScroll: false,
     lastUpdated: 'Last Updated',
     algolia: {
