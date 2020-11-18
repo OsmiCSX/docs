@@ -60,14 +60,14 @@ module.exports = {
     this.info(`Generating new version into 'docs/${version}' ...`)
 
     try {
-      fse.copySync(`${path}/0.5`, `${path}/${version}`)
+      fse.copySync(`${path}/0.5.x`, `${path}/${version}`)
 
-      // remove '0.5' from the top of list
+      // remove '0.5.x' from the top of list
       versions.shift()
       // add new generated version on top of list
       versions.unshift(version)
-      // add '0.5' again on top of list
-      versions.unshift('0.5')
+      // add '0.5.x' again on top of list
+      versions.unshift('0.5.x')
 
       // write to versions.json
 

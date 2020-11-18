@@ -1,6 +1,56 @@
 # Release Notes
 What's new in the latest version of OsmiCSX?
 
+## OsmiCSX v0.5.1
+### Responsive Implementation for Width, Height, and Font Size
+Actually, we already have a responsive module since 0.5.0. But we realize that the implementation of the responsive module still hard. Now we inject it into `apply()` and `connect()` ecosystem.
+
+### Responsive Width based on Window Dimensions Width
+Example:
+```jsx harmony
+import { apply } from 'osmicsx'
+
+const Button = props => {
+  return (
+    <View style={apply('w/90 bg-blue-500 self-center')}>
+      <Text style={apply('text-white text/5 font-medium')}>Button</Text>
+    </View>
+  )
+}
+```
+- `w/90` will return 90% width of the window width
+- `text/5` will return 5% of the window width
+
+### Responsive Height based on Window Dimensions Height
+Example:
+```jsx harmony
+import { apply } from 'osmicsx'
+
+const Button = props => {
+  return (
+    <View style={apply('w/50 h/50 bg-blue-500 self-center items-center justify-center')}>
+      <Text style={apply('text-white text/5 font-medium text-center')}>Hello World!</Text>
+    </View>
+  )
+}
+```
+- `w/50` will return 50% width of the window width
+- `h/50` will return 50% height of the window height
+- `text/5` will return 5% of the window width
+
+### Responsive Font Size based on Window Dimensions Height
+Example:
+```jsx harmony
+import { apply } from 'osmicsx'
+
+const Title = props => {
+  return (
+    <Text style={apply('text-white text/8 font-medium text-center')}>Hello World!</Text>
+  )
+}
+```
+- `text/8` will return 5% of the window width
+
 ## OsmiCSX v0.5.0
 ### Update algorithm for apply() method
 Previously, **`apply()`** method need to use multiple params. Now, we gonna migrate to _space separator_ instead of array params.
@@ -79,24 +129,3 @@ apply("flex", "items-center", "justify-center")
 ## OsmiCSX v0.3.3
 ### Fix minor bugs Border Width
 ### Add colors to provider
-
-## OsmiCSX v0.3.2
-### Add new `OsmiProvider`
-OsmiProvider is a new method to config the custom style / theme like adding custom namespace. And also in OsmiProvider we simplify the styling concept.
-
-We also move `apply` method to OsmiProvider and add new `connect` method for templating style.
-
-### Update Project Structure
-Just move some file to another folder
-
-### Simplify Styling Concept
-We're more simplify the styling concept, for the templating style by removing the apply method. Now you just need to use multiple namespace in the array.
-
-### `deprecated` some Method
-In this release, we've been added OsmiProvider which will replace several method like the default method and family method.
-
-## OsmiCSX v0.2.0
-- Fix minor bugs
-- Refactor `flexDirection` namespace
-- Add more border style
-- Update official documentation

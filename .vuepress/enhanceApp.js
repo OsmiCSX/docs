@@ -23,7 +23,7 @@ export default ({
           }
         }
 
-        let versionText = (version === "0.5") ? "Latest" : `v${version}`
+        let versionText = (version === "0.5.x") ? "Latest" : `v${version}`
         let node = document.createElement("style")
         let textnode = document.createTextNode(`span.site-name:after{content:'${versionText}';font-size:14px;vertical-align:top;border-bottom:2px solid #ececec;padding-bottom:4px;;margin-left:16px;}`);
 
