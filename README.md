@@ -4,7 +4,7 @@ heroImage: https://cdn.statically.io/gh/OsmiCSX/docs/44013885/dist/logo.png
 heroText: OsmiCSX
 tagline: A utility style framework for React Native
 actionText: Get Started →
-actionLink: /0.5/get-started
+actionLink: /0.5.x/get-started
 features:
 - title: Simplicity First
   details: Minimal setup with ready to use boilerplate project structure helps you focus on your style.
