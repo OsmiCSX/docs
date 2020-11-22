@@ -3,18 +3,16 @@ title: Typography
 lang: id-ID
 ---
 ## Font Family
-Utilities for controlling the font family of an element. In OsmiCSX we provide a method called **`family()`** to change the font family, but you need to link your font asset first and call the font name.
+For font family, you need to import your custom font family and register it using `react-native.config.js`. After that open your `CustomTheme.js` that used for OsmiProvider, make the pre-defined style like this:
 ```jsx harmony
-import { StyleSheet } from 'react-native'
-import { apply, family } from 'osmicsx'
+export default {
+...yourRestCode,
 
-export default StyleSheet.create({
-  title: apply([
-    "text-white",
-    "text-lg",
-    family("Roboto-Medium")
-  ])
-})
+// font family
+"font-regular": { fontFamily: "Roboto-Regular" },
+"font-medium": { fontFamily: "Roboto-Medium" },
+"font-bold": { fontFamily: "Roboto-Bold" },
+}
 ```
 
 ## Font Size
